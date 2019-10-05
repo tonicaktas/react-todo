@@ -72,7 +72,9 @@ class App extends Component {
     let products = this.getProducts();
     // loopar igenom produkter och lägger in ny informaton om input.value.name(name) är inte lika som default.value.name(orginalName)
     products = products.map(product => {
+      //om produkt.name i state är lika som orginalName(som hämtas av prop, det värdet som ä i inputen) 
       if(product.name === originalName){
+        // sätter ny state med name som är värdet som skrivs i inputet 
         product.name = name;
         product.price = price;
       }
